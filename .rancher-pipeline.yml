@@ -1,0 +1,11 @@
+stages:
+- name: Build & Docker
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: majdimohammad/docker_graphql
+      pushRemote: true
+      registry: index.docker.io
+timeout: 60
+notification: {}
